@@ -73,12 +73,12 @@ function buildCharts(sample) {
     let topSampleValues = sampleValues.slice(0, 10).reverse();
     let topOtuLabels = otuLabels.slice(0, 10).reverse();
 
-    let yticks = topOtuIds.map(otuID => `OTU ${otuID}`);
+    let yTicks = topOtuIds.map(otuID => `OTU ${otuID}`);
 
     // Build a Bar Chart
     var barTrace = {
       x: topSampleValues,
-      y: yticks,
+      y: yTicks,
       text: topOtuLabels,
       type: 'bar',
       orientation: 'h'
@@ -86,8 +86,8 @@ function buildCharts(sample) {
 
     var barData = [barTrace];
     var barLayout = {
-      title: 'Top 10 OTUs',
-      xaxis: { title: 'Sample Values' },
+      title: 'Top 10 Bacteria Cultures Found',
+      xaxis: { title: 'Number of Bacteria' },
       yaxis: { title: 'OTU IDs' },
       height: 400,
       width: 600
